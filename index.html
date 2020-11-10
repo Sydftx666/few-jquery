@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>jQuery</title>
+
+    <link rel="stylesheet" href="jquery.css" />
+    <script src="script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("img").mouseover(function() {
+          $(this).hide();
+        });
+
+        $("img").mouseout(function() {
+          $(this).show();
+        });
+
+        $("p").click(function() {
+          $("p").addClass("blue");
+        });
+
+        $("p").hover(function() {
+          $("p").addClass("bold");
+        });
+
+         
+        $("p").mouseout(function() {
+          $("p").removeClass("bold");
+        });
+        
+        $("h1").mouseover(function() {
+          $("h1").addClass("bg");
+        });
+        
+       
+        $("h1").mouseout(function() {
+          $("h1").removeClass("bg");
+        });
+        
+          $("h2").click(function() {
+          $("h2").hide();
+        });
+
+
+        $("button").click(function() {
+          // $("div").animate({ left: "250px" });
+
+          $("img").animate({
+            height: "+=250px",
+            width: "+=200px"
+          });
+        });
+        
+          $("*").keydown(function(){
+    $("*").css("background-color", "pink");
+  });
+        
+             $("*").keyup(function(){
+    $("*").css("background-color", "white");
+  });
+        
+      });
+    </script>
+  </head>
+  <body>
+    <h1>
+      Hi!
+    </h1>
+
+    <h2>
+      Try clicking on or hovering over elements. <br/> Also try pressing any key.
+    </h2>
+
+    <p>My name is Sydney.</p>
+
+    <img
+      src="https://cdn.glitch.com/d195c2bc-c168-4c39-86db-9302ea621f1f%2Fbeauty_1578989159880.JPG?v=1605003928936"
+      width="200"
+    />
+
+    <br />
+    <button>Click Me!</button>
+  </body>
+</html>
